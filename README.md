@@ -10,8 +10,11 @@ Perskaitykite šį trumpą gidą nuosekliai, kadangi informacija apie vieną iš
 - `LICENSE` (duomenų naudojimo licenzija);
 - `README.MD` (šis dokumentas).
 
+## db.geo.json
+Šioje byloje didelė dalis duomenų yra pateikiami tekstiniu formatu, kadangi tai yra duomenys nukopijuoti iš LR. teisės aktų. Čia sutiksite atstumus kilometrais, metrais, ir jūrmylėmis. Koordinatės bus pateiktos įvairiais formatais, ir kartais ilguma ir platuma bus sukeistos vietomis. LR kariuomenė kai kuriuose savo dokumentuose naudojo koordinačių notaciją, kuri nėra standartinė. ORAN sistema buvo sukurta interpretuoti visus šiuos duomenų tipus, bet Jums nerekomenduojame bandyti duomenų interpretuoti patiems. Vietoje to, naudokite vieną iš sekančių bylų. Ši čia yra tik todėl, kad galėtumėte patikrinti ir detaliau išstudijuoti neaiškias reikšmes kituose duomenų bazės pateikimuose.
+
 ## data.js
-Ši byla yra sunkiausiai iššifruojam. Tačiau, jei pageidaujate iššifruoti koordinates joje, kiekvieną koordinatės sveikąjį skaičių reikia padalinti iš 100 000 (šimto tūkstančių) ir pridėti prie žemėlapio centro „floor“ funkcijos rezultato. Pavyzdžiui, koordinatė [68583,351302] nurodytų tašką [55+0.68583,23+3.51302] WGS84 Lat Lng Decimal Degrees sistemoje.
+Ši byla yra sunkiausiai iššifruojama. Tačiau, jei pageidaujate iššifruoti koordinates joje, kiekvieną koordinatės sveikąjį skaičių reikia padalinti iš 100 000 (šimto tūkstančių) ir pridėti prie žemėlapio centro „floor“ funkcijos rezultato. Pavyzdžiui, koordinatė [68583,351302] nurodytų tašką [55+0.68583,23+3.51302] WGS84 Lat Lng Decimal Degrees sistemoje.
 
 `data.js` byloje dalis dažnai pasikartojančių tekstų taip pat yra pakeistos vietažymėmis (panašu į žodyninę kompresiją). Vietažymės yra matomos `"prefabs"` JSON skirsnyje. 
 
