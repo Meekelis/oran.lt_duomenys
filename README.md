@@ -1,7 +1,7 @@
 ORAN JSON DUOMENŲ GIDAS
 =======================
 
-Šioje repozitorijoje rasite keturias bylas:
+Šioje repozitorijoje rasite penkias bylas:
 - `db.geo.json` (duomenų bazė, kurią ORAN naudojo sistemos viduje. Šioje byloje koordinatės yra pateikiamos taip, kaip jos atrodo LR. teisės aktuose);
 - `data.js` (ypač suspausta duomenų bazė, kuri buvo perduodama ORAN klientams, kai jie apsilankydavo svetainėje. Šie duomenys buvo dinamiškai iššifruojami naršyklės pagal poreikį. Jie vis dar naudoja unikalų ORAN formatą, tačiau mūsų sistema kompiliuojant juos jau ištaisė tam tikras klaidas, esančias teisės aktuose, naudojant automatines heuristikas);
 - `db.geo.wgs84_compiled.json` (ši duomenų bazė yra pagaminta specialiai trečiųjų šalių naudojimui. Joje duomenys yra savaime suprantami ir atitinka WGS84 Lat Long DD standartą);
@@ -26,4 +26,4 @@ Visus duomenis atiduodame CC0 licenzijos pagrindu - https://creativecommons.org/
 ## Duomenų tikslumas
 ORAN duomenų bazėse `data.js` ir `db.geo.wgs84_compiled.json` toleruojamas reprezentuojamų duomenų tikslumo nuokrypis - iki 50cm.
 
-Garantijos duomenų tikslumui neduodame, ir netgi žinome, kad jie yra šiek tiek pasenę – konkrečiai, naujausias ANS oro erdvės atvaizdavimo modelis (https://www.ans.lt/lt/oni/oro-erdvs-atvaizdavimo-modelis/) nėra integruotas. 
+Garantijos duomenų tikslumui neduodame, ir netgi pranešame, kad jie yra šiek tiek pasenę. Konkrečiai, naujausias ANS oro erdvės atvaizdavimo modelis (https://www.ans.lt/lt/oni/oro-erdvs-atvaizdavimo-modelis/) į duomenis nėra integruotas. 
