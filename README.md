@@ -1,11 +1,12 @@
 ORAN JSON DUOMENŲ GIDAS
 =======================
 
-Šiame aplanke rasite keturias bylas:
+Šioje repozitorijoje rasite keturias bylas:
 - `db.geo.json` (duomenų bazė, kurią ORAN naudojo sistemos viduje. Šioje byloje koordinatės yra pateikiamos taip, kaip jos atrodo LR. teisės aktuose);
 - `data.js` (ypač suspausta duomenų bazė, kuri buvo perduodama ORAN klientams, kai jie apsilankydavo svetainėje. Šie duomenys buvo dinamiškai iššifruojami naršyklės pagal poreikį. Jie vis dar naudoja unikalų ORAN formatą, tačiau mūsų sistema kompiliuojant juos jau ištaisė tam tikras klaidas, esančias teisės aktuose, naudojant automatines heuristikas);
 - `db.geo.wgs84_compiled.json` (ši duomenų bazė yra pagaminta specialiai trečiųjų šalių naudojimui. Joje duomenys yra savaime suprantami ir atitinka WGS84 Lat Long DD standartą);
-- `readme.md` (šis dokumentas).
+- `LICENSE` (duomenų naudojimo licenzija);
+- `README.MD` (šis dokumentas).
 
 ## data.js
 Ši byla yra sunkiausiai iššifruojam. Tačiau, jei pageidaujate iššifruoti koordinates joje, kiekvieną koordinatės sveikąjį skaičių reikia padalinti iš 100 000 (šimto tūkstančių) ir pridėti prie žemėlapio centro „floor“ funkcijos rezultato. Pavyzdžiui, koordinatė [68583,351302] nurodytų tašką [55+0.68583,23+3.51302] WGS84 Lat Lng Decimal Degrees sistemoje.
