@@ -1,12 +1,13 @@
 ORAN JSON DUOMENŲ GIDAS
 =======================
 
-Perskaitykite šį trumpą gidą nuosekliai, kadangi informacija apie vieną iš bylų gali būti pritaikoma kitoms. ORAN duomenys nėra skirti pradedaniesiems arba galiniam vartotojui (nors, žinoma, mes neturime prieštaravimų bet kokiam jų naudojimui). Duomenis integruojant savo projekte Jums reiks pasikliauti sveika nuožiūra, geru geografinių duomenų ir minimaliu JSON technologijos suvokimu. Jeigu perskaitę šį gidą vis dar turite klausimų, galite atidaryti "issue" viršuje, tačiau klausimai aptarti šiame gide nebus papildomai atsakomi.
+Perskaitykite šį trumpą gidą nuosekliai, kadangi informacija apie vieną iš bylų gali būti pritaikoma kitoms. Duomenis integruojant savo projekte Jums reiks pasikliauti sveika nuožiūra, geru geografinių duomenų ir minimaliu JSON technologijos suvokimu, nebent naudojate KML duomenis. Jeigu perskaitę šį gidą vis dar turite klausimų, galite atidaryti "issue" viršuje, tačiau klausimai aptarti šiame gide nebus papildomai atsakomi.
 
-Šioje repozitorijoje rasite penkias bylas:
+Šioje repozitorijoje rasite šešias bylas:
 - `db.geo.json` (duomenų bazė, kurią ORAN naudojo sistemos viduje. Šioje byloje koordinatės yra pateikiamos taip, kaip jos atrodo LR. teisės aktuose);
 - `data.js` (ypač suspausta duomenų bazė, kuri buvo perduodama ORAN klientams, kai jie apsilankydavo svetainėje. Šie duomenys buvo dinamiškai iššifruojami naršyklės pagal poreikį. Jie vis dar naudoja unikalų ORAN formatą, tačiau mūsų sistema kompiliuojant juos jau ištaisė tam tikras klaidas, esančias teisės aktuose, naudojant automatines heuristikas);
 - `db.geo.wgs84_compiled.json` (ši duomenų bazė yra pagaminta specialiai trečiųjų šalių naudojimui. Joje duomenys yra savaime suprantami ir atitinka WGS84 Lat Long DD standartą);
+- `db.geo.kml` (nauja **duomenų konversija specialiai pritaikyta Google Maps produktams, pavyzdžiui My Maps**);
 - `LICENSE` (duomenų naudojimo licenzija);
 - `README.MD` (šis dokumentas).
 
@@ -24,6 +25,9 @@ Nerekomenduojame pradėti naudoti šių duomenų, tačiau jie yra tie duomenys, 
 Šioje byloje koordinatės yra pateiktos WGS84 Lat Lng Decimal Degrees sistemoje. Jų niekaip perskaičiuoti nereikia. Taip pat, šioje byloje vietų aprašai pateikti be žodyninės kompresijos aplikacijos ir UTF-8 rašmenimis. Kitaip tariant, šią duomenų bazę turėtumėte galėti panaudoti lengvai.
 
 Kai kurie vietų parametrai gali būti savaime neaiškūs, pavyzdžiui `"rank"`. Šis parametras nurodo objektų svarbą, kur objektai su verte 1 yra svarbiausi, o turintys didesnes reikšmes - mažiau svarbūs. Iš tiesų, ši reikšmė yra suskaičiuota pagal perimetrą. Jos paskirtis žemėlapio piešimo metu yra išdėstyti mažesnius elementus ant didesnių, kad visi būtų pasiekiami be "click-through" aplikacijų. Kitas nebūtinai iš karto aiškus parametras yra `"radius"`. Jis nurodo apskritimų spindulį *metrais*. Tačiau šie metrai yra pritaikyti `Leaflet JS` žemėlapio atvaizdavimo priemonei, kuri savaip susitvarko su žemės gaublio projekcijos iškreipimais ("Projection Distortion") ir gali neatitikti Jūsų projekcijos nuokrypių apskaičiavimo sprendimo. Jeigu pageidautumėte apskritimų spindulio duomenų tiesiai iš teisės aktų (jie bus pateikti metrais, kilometrais arba jūrmylėmis), tuomet originalų formatą galite rasti byloje `db.geo.json`.
+
+## db.geo.kml
+Ši byla yra paruošta galiniam vartotojui. Ją galima importuoti į produktus, kaip Google Maps, Google Earth, ar Google My Maps.
 
 ## Duomenų licenzija
 Visus duomenis atiduodame CC0 licenzijos pagrindu - https://creativecommons.org/publicdomain/zero/1.0/. Kitaip tariant, galite naudoti, kaip pageidaujate. Ir mes nereikalaujame nurodyti jų šaltinio.
